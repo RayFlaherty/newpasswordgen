@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Gen</title>
+  </head>
+  <body>
+    <div>
+      <header><h1>PASSWORD GEN</h1></header>
+      <div id="passwordBox">
+        <h2>Password</h2>
+        <div id="choices">
+          <h3>Please Select the your password preferences.</h3>
+          <div id="length">
+            <p>length</p>
+            <div>
+              <input
+                type="radio"
+                name="lengthFig"
+                id="eightchar"
+                value="eight"
+                checked
+              />
+              <label for="eightchar">8</label>
+              <input type="radio" name="lengthFig" id="ninechar" value="nine" />
+              <label for="ninechar">9</label>
+              <input type="radio" name="lengthFig" id="tenchar" value="ten" />
+              <label for="tenchar">10</label>
+              <input
+                type="radio"
+                name="lengthFig"
+                id="elevenchar"
+                value="eleven"
+              />
+              <label for="elevenchar">11</label>
+              <input
+                type="radio"
+                name="lengthFig"
+                id="twelvechar"
+                value="twelve"
+              />
+              <label for="twelvechar">12</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
