@@ -56,9 +56,11 @@ const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 //   "z",
 // ];
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-const symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
-var passLength, chars, password;
+//const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+const numbers = "1234567890";
+//const symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+const symbols = "!@#$%^&*()";
+var passLength, chars, password, passArr;
 
 function getLength() {
   var eightchar = document.getElementById("eightchar");
@@ -81,7 +83,6 @@ function getLength() {
     return passLength;
   } else if (twelvechar.checked == true) {
     passLength = Number(twelvechar.value);
-    console.log(passLength);
     return passLength;
   } else console.log("no value selected");
 }
@@ -92,7 +93,7 @@ function getChars() {
   const lCase = document.getElementById("lowerCase").checked;
   const nums = document.getElementById("numbers").checked;
   const symb = document.getElementById("symbols").checked;
-  password = generatePass(uCase, lCase, nums, symb);
+  passArr = generatePass(lCase, uCase, nums, symb);
 
   function generatePass(lCase, uCase, nums, symb) {
     let chars = "";
@@ -101,12 +102,14 @@ function getChars() {
     if (nums) chars = chars.concat(numbers);
     if (symb) chars = chars.concat(symbols);
 
-    const passChars = [];
+    var passChars = [];
     for (let i = 0; i < passLength; i++) {
       const characters = chars[Math.floor(Math.random() * chars.length)];
       passChars.push(String(characters));
     }
-    console.log(passChars);
+    let password = passChars.join("");
+    console.log(password);
+    return password;
   }
 }
 
@@ -116,7 +119,13 @@ function getChars() {
 //);
 //});
 
+function writePass() {
+  var password = getChars();
+  console.log(password);
+  var passwordTxt = document.getElementById("password");
+  passwordTxt.value = password;
+}
+
 document.getElementById("gogo").addEventListener("click", () => {
-  //makePass()
-  getChars();
+  writePass();
 });
