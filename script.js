@@ -60,7 +60,7 @@ const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "1234567890";
 //const symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 const symbols = "!@#$%^&*()";
-var passLength, chars, password, passArr;
+var passLength, chars, password, passArr, passChars;
 
 function getLength() {
   var eightchar = document.getElementById("eightchar");
@@ -107,25 +107,32 @@ function getChars() {
       const characters = chars[Math.floor(Math.random() * chars.length)];
       passChars.push(String(characters));
     }
-    let password = passChars.join("");
+    var password = passChars.join("");
+
     console.log(password);
+    var passwordTxt = document.getElementById("password");
+    passwordTxt.value = password;
+
     return password;
   }
 }
 
-//document.querySelector("button").addEventListener("click", () => {
-// [...document.querySelectorAll('input[type="radio"]')].forEach(
-// (input) => (input.checked = false)
-//);
-//});
+document.getElementById("clear").addEventListener("click", () => {
+  [...document.querySelectorAll('input[type="radio"]')].forEach(
+    (input) => (input.checked = false)
+  );
+  [...document.querySelectorAll('input[type="checkbox"]')].forEach(
+    (input) => (input.checked = false)
+  );
+  [...(document.getElementById("password").value = "")];
+});
 
-function writePass() {
-  var password = getChars();
-  console.log(password);
-  var passwordTxt = document.getElementById("password");
-  passwordTxt.value = password;
-}
+// function writePass() {
+//   var password = getChars();
+//   console.log(password);
+
+// }
 
 document.getElementById("gogo").addEventListener("click", () => {
-  writePass();
+  getChars();
 });
