@@ -109,7 +109,7 @@ function getChars() {
     }
     var password = passChars.join("");
 
-    console.log(password);
+    //console.log(password);
     var passwordTxt = document.getElementById("password");
     passwordTxt.value = password;
 

@@ -8,13 +8,20 @@
   </head>
   <body>
     <div>
+      <div class="topper">
       <header><h1>PASSWORD GEN</h1></header>
-      <div id="passwordBox">
-        <h2>Password</h2>
-        <div id="choices">
-          <h3>Please Select the your password preferences.</h3>
-          <div id="length">
-            <p>length</p>
+    </div>
+      <div class="passwordBox">
+        <div class="passwordBoxHeader"><h2>Password</h2></div>
+        
+        <div class="choices">
+          <div>
+            <h3>Please Select the your password preferences.</h3>
+          </div>
+          
+        <div>
+          <div class="PasswordLength" id="length">
+            <p>Password Length</p>
             <div>
               <input
                 type="radio"
@@ -43,7 +50,9 @@
               />
               <label for="twelvechar">12</label>
             </div>
-            <div id="details">
+        </div>
+        <div>
+            <div class="details">
               <div>
                 <input type="checkbox" name="upperCase" id="upperCase" />
                 <label for="upperCase">Uppercase Letters</label>
@@ -60,18 +69,29 @@
                 <input type="checkbox" name="symbols" id="symbols" />
                 <label for="symbols"> Special Symbols</label>
               </div>
+            </div >
+            <br>
+            <div class="actions"> 
               <div>
                 <button id="gogo"> Go! </button>
               </div>
-              <div><button id="clear">Clear</button></div>
+              <div>
+                <button id="clear">Clear</button>
+              </div></div>
+             
                 
               </div>
             </div>
           </div>
+           <div class="boxSpot">
+        <textarea class="passwordText" name="passName" id="password"  placeholder="Password Here"></textarea>
+      </div>
         </div>
       </div>
+    
+     
     </div>
-    <div><textarea name="passName" id="password" cols="30" rows="10" placeholder="Password Here"></textarea></div>
+    
   </body>
   <script src="script.js"></script>
 </html>

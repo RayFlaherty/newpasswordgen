@@ -1,0 +1,63 @@
+.topper {
+  margin: auto;
+  width: 50%;
+  border: solid;
+  background-color: aqua;
+  text-align: center;
+}
+
+.passwordBox {
+  border: solid;
+  margin: auto;
+  margin-top: 10px;
+  width: 80%;
+  background-color: aqua;
+}
+.passwordBoxHeader {
+  text-align: center;
+}
+
+.choices {
+  background-color: antiquewhite;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1%;
+  border: solid;
+  border-radius: 5mm;
+}
+
+.PasswordLength {
+  background-color: white;
+  border: solid;
+  border-radius: 5mm;
+  width: 40%;
+  margin: auto;
+}
+
+.details,
+.actions {
+  display: inline-flex;
+  padding: 10px;
+}
+
+button {
+  height: 30px;
+  width: 50px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.boxSpot {
+  margin: 10px;
+  display: flex;
+}
+.passwordText {
+  margin: auto;
+  text-align: center;
+  font-size: x-large;
+  height: 40px;
+  width: 20%;
+  border-radius: 5rem;
+  border: solid;
+  padding-top: 15px;
+}
